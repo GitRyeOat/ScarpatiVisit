@@ -95,12 +95,12 @@ header{
 
 /* ---------- hero ---------- */
 .hero{padding:64px 0 36px}
-.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 .hero h1 span{color:var(--blue-deep);display:block}
 .hero .lede{font-size:1.13rem;color:var(--ink-soft);margin-top:1.1rem;max-width:34em}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
 .cta-hint{font-size:.86rem;color:#8b959c;margin-top:14px;max-width:34em}
-.cta-row .btn.lg{padding:16px 28px;font-size:1.04rem}
+.cta-row .btn.lg{padding:16px 22px;font-size:1.02rem}
 .hero-photo{position:relative}
 .hero-photo img{
   border-radius:16px;box-shadow:0 18px 44px rgba(17,17,17,.14);
@@ -293,7 +293,7 @@ footer a:hover{color:var(--blue-deep)}
       <h1>An Evening at Blue Dot <span>For the Scarpati Family</span></h1>
       <p class="lede">Celebrating community while supporting a remarkable family. An evening of horsemanship, dinner under the redwoods, and the premiere of a short film about the Scarpatis.</p>
       <div class="cta-row">
-        <a class="btn lg js-pay" href="#tickets">Get Tickets — $100</a>
+        <a class="btn lg js-pay" href="#tickets">Get Tickets — $100 minimum</a>
         <a class="btn lg ghost" href="#contact">Contact Us</a>
         <a class="btn lg ghost" href="scarpati-flyer.pdf" download="An-Evening-at-Blue-Dot-Scarpati-Family.pdf">Share This Event</a>
       </div>
@@ -308,7 +308,7 @@ footer a:hover{color:var(--blue-deep)}
     <div class="facts">
       <div class="fact"><div class="k">When</div><div class="v">Sunday, August 23 · 6 PM</div></div>
       <div class="fact"><div class="k">Where</div><div class="v">Blue Dot Barn<br>2800 Nicasio Valley Road, Nicasio</div></div>
-      <div class="fact"><div class="k">Donation</div><div class="v">$100 — all inclusive</div></div>
+      <div class="fact"><div class="k">Donation</div><div class="v">Minimum donation is $100<br>— all inclusive</div></div>
     </div>
   </div>
 </div>
@@ -341,7 +341,7 @@ footer a:hover{color:var(--blue-deep)}
     </div>
 
     <div class="cta-row" style="margin-top:34px">
-      <a class="btn lg js-pay" href="#tickets">Get Tickets — $100</a>
+      <a class="btn lg js-pay" href="#tickets">Get Tickets — $100 minimum</a>
     </div>
   </div>
 </section>
@@ -432,10 +432,10 @@ footer a:hover{color:var(--blue-deep)}
 <section id="tickets" class="support">
   <div class="wrap">
     <h2>Let's come together and spread the love</h2>
-    <p>All proceeds of the clinic and the fundraiser dinner go directly to the Scarpati family. Tickets are $100 and cover the whole evening.</p>
+    <p>All proceeds of the clinic and the fundraiser dinner go directly to the Scarpati family. The minimum donation is $100 per seat and covers the whole evening.</p>
 
     <div class="link-row">
-      <a class="btn lg js-pay" href="#tickets">Get Tickets — $100</a>
+      <a class="btn lg js-pay" href="#tickets">Get Tickets — $100 minimum</a>
     </div>
 
     <div class="alt-give">
@@ -505,7 +505,7 @@ footer a:hover{color:var(--blue-deep)}
 <div class="modal" id="pay" role="dialog" aria-modal="true" aria-labelledby="pay-title">
   <div class="modal-box">
     <button class="modal-close" type="button" aria-label="Close">&times;</button>
-    <h3 id="pay-title">Get Tickets — $100</h3>
+    <h3 id="pay-title">Get Tickets — Minimum Donation $100</h3>
     <p class="sub" id="pay-sub">Scan the code with your phone camera, or tap the link to open Venmo.</p>
 
     <a class="qr" href="https://venmo.com/u/oopaddy" target="_blank" rel="noopener">
@@ -540,8 +540,8 @@ footer a:hover{color:var(--blue-deep)}
 
   var MODES = {
     tickets: {
-      title: 'Get Tickets — $100',
-      sub:   'Send $100 per seat. Scan the code with your phone camera, or tap the link to open Venmo.'
+      title: 'Get Tickets — Minimum Donation $100',
+      sub:   'Send minimum donation $100 per seat. Scan the code with your phone camera, or tap the link to open Venmo.'
     },
     support: {
       title: 'Support Oscar',

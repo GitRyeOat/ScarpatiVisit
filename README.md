@@ -73,7 +73,7 @@ all the details!"* The QR scans straight into the Venmo app; tapping it opens th
 same profile in a browser.
 
 **Support Oscar** (header and blue band) opens the same pop-up, worded for an
-open-amount contribution rather than a $100 ticket. Same Venmo account, same
+open-amount contribution rather than a $100 minimum-donation seat. Same Venmo account, same
 phone message. It's hidden in the header on narrow phones to keep the bar tidy —
 the one in the blue band always shows.
 
@@ -91,7 +91,7 @@ same filename.
 | Phone number | `4153287388` |
 | Email address | `shamrockbluedot@gmail.com` (appears three times) |
 | Pop-up wording | `modal-note` |
-| Ticket price | `$100` |
+| Ticket price / minimum donation | `$100` |
 | Pop-up wording for either mode | `var MODES` in the script at the bottom |
 | Photo credit | `class="credit"` |
 
