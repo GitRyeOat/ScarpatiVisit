@@ -66,11 +66,19 @@ point a CNAME record at `YOURNAME.github.io` with your domain registrar.
 
 ## How the buttons work
 
-**Get Tickets** (header, hero, event section, blue band) opens a pop-up with the
-Venmo QR code, a link to `venmo.com/u/oopaddy`, and this message: *"Once payment
-has been made, please do text or call 415 328 7388 to connect with us and cover
-all the details!"* The QR scans straight into the Venmo app; tapping it opens the
-same profile in a browser.
+**Get Tickets** (header, hero, event section, blue band) opens a pop-up offering
+**two ways to pay**:
+
+1. **Venmo** — QR code plus a link to `venmo.com/u/oopaddy`. The QR scans straight
+   into the Venmo app; tapping it opens the same profile in a browser.
+2. **Apple Pay** — a black highlighted block reading "Apple Pay directly to
+   415-328-7388". Tapping it opens Messages addressed to that number, which is
+   where Apple Cash is sent from.
+
+On phones the Apple Pay block appears **above** Venmo, since scanning a QR code
+with the same phone you're holding doesn't work; on desktop Venmo comes first.
+Both layouts end with: *"Once payment has been made, please do text or call
+415 328 7388 to connect with us and cover all the details!"*
 
 **Support Oscar** (header and blue band) opens the same pop-up, worded for an
 open-amount contribution rather than a $100 minimum-donation seat. Same Venmo account, same
@@ -90,7 +98,8 @@ same filename.
 | Venmo account | `venmo.com/u/oopaddy` (appears twice) — and regenerate `images/venmo-qr.png` |
 | Phone number | `4153287388` |
 | Email address | `shamrockbluedot@gmail.com` (appears three times) |
-| Pop-up wording | `modal-note` |
+| Pop-up closing message | `modal-note` |
+| Apple Pay number in the pop-up | `pay-apple` |
 | Ticket price / minimum donation | `$100` |
 | Pop-up wording for either mode | `var MODES` in the script at the bottom |
 | Photo credit | `class="credit"` |

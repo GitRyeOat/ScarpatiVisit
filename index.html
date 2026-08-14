@@ -238,13 +238,62 @@ section{padding:68px 0}
   max-height:92vh;overflow:auto}
 .modal-box h3{font-family:Fraunces,Georgia,serif;font-size:1.6rem;font-weight:600}
 .modal-box .sub{color:var(--ink-soft);font-size:.97rem;margin-top:8px}
-.modal-box .qr{display:inline-block;margin:22px auto 6px;padding:14px;background:#fff;
+.modal-box .qr{display:inline-block;margin:14px auto 6px;padding:12px;background:#fff;
   border:1px solid var(--line);border-radius:16px;line-height:0}
-.modal-box .qr img{width:210px;height:210px}
+.modal-box .qr img{width:190px;height:190px}
 .modal-box .qr:hover{border-color:var(--blue)}
 .modal-box .vlink{display:inline-block;font-weight:700;font-size:1.02rem;margin-top:6px;
   text-decoration:none;color:var(--blue-deep);word-break:break-all}
 .modal-box .vlink:hover{text-decoration:underline}
+
+/* two payment options */
+.pay-option{margin-top:20px;padding:18px 16px 16px;background:var(--blue-tint-2);
+  border:1px solid #d8ecfa;border-radius:16px}
+.pay-label{font-size:.72rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--blue-deep);margin:0}
+.pay-hint{font-size:.85rem;color:#7a848b;margin:10px 0 0}
+
+.pay-or{display:flex;align-items:center;gap:14px;margin:18px 2px}
+.pay-or::before,.pay-or::after{content:"";flex:1;height:1px;background:var(--line)}
+.pay-or span{font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#9aa4ab}
+
+.pay-apple{
+  display:block;text-decoration:none;background:var(--ink);color:#fff;
+  border-radius:16px;padding:20px 18px;transition:.18s ease;
+}
+.pay-apple:hover{background:#000;transform:translateY(-1px);box-shadow:0 10px 26px rgba(17,17,17,.28)}
+.pay-apple-label{display:block;font-size:.72rem;font-weight:700;letter-spacing:.15em;
+  text-transform:uppercase;color:rgba(255,255,255,.72)}
+.pay-apple-num{display:block;font-size:1.62rem;font-weight:700;letter-spacing:.01em;
+  color:#fff;margin-top:5px;line-height:1.2}
+.pay-apple-hint{display:block;font-size:.83rem;color:rgba(255,255,255,.72);margin-top:7px}
+/* keep BOTH payment options visible without scrolling on small phones */
+@media(max-height:760px),(max-width:430px){
+  .modal-box{padding:24px 20px 22px;border-radius:16px}
+  .modal-box h3{font-size:1.3rem}
+  .modal-box .sub{font-size:.9rem;margin-top:6px}
+  .modal-box .qr{margin:10px auto 4px;padding:9px;border-radius:12px}
+  .modal-box .qr img{width:132px;height:132px}
+  .modal-box .vlink{font-size:.95rem}
+  .pay-option{margin-top:14px;padding:13px 12px 12px;border-radius:13px}
+  .pay-hint{font-size:.79rem;margin-top:7px}
+  .pay-or{margin:12px 2px}
+  .pay-apple{padding:15px 14px;border-radius:13px}
+  .pay-apple-num{font-size:1.4rem}
+  .pay-apple-hint{font-size:.78rem;margin-top:5px}
+  .modal-note{padding:12px 14px;margin-top:14px;font-size:.87rem}
+  .modal-close{top:6px;right:10px;font-size:1.7rem}
+
+  /* on a phone, tap-to-pay beats scanning a QR with the same phone —
+     so Apple Pay moves above Venmo and is visible without scrolling */
+  .modal-box{display:flex;flex-direction:column}
+  .modal-box h3{order:1}
+  .modal-box .sub{order:2}
+  .pay-apple{order:3;margin-top:14px}
+  .pay-or{order:4}
+  .pay-option{order:5;margin-top:0}
+  .modal-note{order:6}
+}
 .modal-note{background:var(--blue-tint);border-radius:12px;padding:16px 18px;margin-top:22px;
   font-size:.95rem;line-height:1.55;color:var(--ink);text-align:left}
 .modal-note a{font-weight:700;text-decoration:none;white-space:nowrap}
@@ -506,13 +555,25 @@ footer a:hover{color:var(--blue-deep)}
   <div class="modal-box">
     <button class="modal-close" type="button" aria-label="Close">&times;</button>
     <h3 id="pay-title">Get Tickets — Minimum Donation $100</h3>
-    <p class="sub" id="pay-sub">Scan the code with your phone camera, or tap the link to open Venmo.</p>
+    <p class="sub" id="pay-sub">Two ways to pay — Venmo or Apple Pay. Whichever is easier.</p>
 
-    <a class="qr" href="https://venmo.com/u/oopaddy" target="_blank" rel="noopener">
-      <img src="images/venmo-qr.png" alt="QR code linking to the Venmo profile venmo.com/u/oopaddy" width="210" height="210">
+    <div class="pay-option">
+      <p class="pay-label">Pay by Venmo</p>
+      <a class="qr" href="https://venmo.com/u/oopaddy" target="_blank" rel="noopener">
+        <img src="images/venmo-qr.png" alt="QR code linking to the Venmo profile venmo.com/u/oopaddy" width="190" height="190">
+      </a>
+      <br>
+      <a class="vlink" href="https://venmo.com/u/oopaddy" target="_blank" rel="noopener">venmo.com/u/oopaddy</a>
+      <p class="pay-hint">Scan with your phone camera, or tap the link.</p>
+    </div>
+
+    <div class="pay-or"><span>or</span></div>
+
+    <a class="pay-apple" href="sms:+14153287388">
+      <span class="pay-apple-label">Apple Pay directly to</span>
+      <span class="pay-apple-num">415-328-7388</span>
+      <span class="pay-apple-hint">Tap to open Messages and send with Apple Cash</span>
     </a>
-    <br>
-    <a class="vlink" href="https://venmo.com/u/oopaddy" target="_blank" rel="noopener">venmo.com/u/oopaddy</a>
 
     <div class="modal-note">
       Once payment has been made, please do text or call
@@ -541,11 +602,11 @@ footer a:hover{color:var(--blue-deep)}
   var MODES = {
     tickets: {
       title: 'Get Tickets — Minimum Donation $100',
-      sub:   'Send minimum donation $100 per seat. Scan the code with your phone camera, or tap the link to open Venmo.'
+      sub:   'Send minimum donation $100 per seat — by Venmo or Apple Pay, whichever is easier.'
     },
     support: {
       title: 'Support Oscar',
-      sub:   'Send any amount you like — it goes straight to the Scarpati family. Scan the code with your phone camera, or tap the link to open Venmo.'
+      sub:   'Send any amount you like — it goes straight to the Scarpati family. Venmo or Apple Pay, whichever is easier.'
     }
   };
 
